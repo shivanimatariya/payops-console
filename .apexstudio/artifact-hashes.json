@@ -80,7 +80,7 @@
     "frontend/main.jsx": "cac5ad762514c7db1355aaabe99b0495ebe4a31fcbc89c153b352dc882cc94ea",
     "frontend/package.json": "9d1787dd1517ff1b2c77dbe9573eab548d5851bf5ceecb2814a86431ac4a6a0e",
     "frontend/pages/Fraud.jsx": "1077e8463f4bc266f2a796aca6ed70ff25a0facbd990dd1100680619cff84c16",
-    "frontend/pages/Onboarding.jsx": "144cef40fd17a200a863f7e39e759353d34ed7bd647b5ede47798bb886ab61b6",
+    "frontend/pages/Onboarding.jsx": "1a3a9e208de41659e54bbd5f8ea0351dfacf85d46b3812d776b59ea852c866f1",
     "frontend/pages/Reconciliation.jsx": "ea0db4180ab8b03db48d2df000cc039242acf94484a5efa016d9854e1f801035",
     "frontend/postcss.config.js": "f13fcd62daab31b54fe65a6d42368509ff4bd8c7d6319d38e69967fff955db8f",
     "frontend/public/favicon.svg": "5cd9dd985d9ac09e5f74f33aeb729a0fb0e0ae20cd6549de0adf0c4e8b034376",
