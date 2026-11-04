@@ -1,0 +1,16 @@
+{
+  "auth": true,
+  "rbac": true,
+  "fileUpload": true,
+  "realtimeEvents": true,
+  "ai": true,
+  "payments": true,
+  "entities": [
+    "merchantapplication",
+    "reconexception",
+    "flaggedtransaction",
+    "decision",
+    "chatmessage",
+    "activitylogentry"
+  ]
+}

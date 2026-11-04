@@ -1,0 +1,37 @@
+{
+  "statements": {
+    "MerchantApplication": [
+      "has many Decision (Decision.item_id where item_type = MerchantApplication)",
+      "has many ActivityLogEntry (ActivityLogEntry.target)",
+      "may be linked from many ChatMessage (ChatMessage.linked_item_id)"
+    ],
+    "ReconException": [
+      "has many Decision (Decision.item_id where item_type = ReconException)",
+      "has many ActivityLogEntry (ActivityLogEntry.target)",
+      "may be linked from many ChatMessage (ChatMessage.linked_item_id)"
+    ],
+    "FlaggedTransaction": [
+      "has many Decision (Decision.item_id where item_type = FlaggedTransaction)",
+      "has many ActivityLogEntry (ActivityLogEntry.target)",
+      "may be linked from many ChatMessage (ChatMessage.linked_item_id)"
+    ],
+    "Decision": [
+      "belongs to one MerchantApplication, ReconException or FlaggedTransaction (via item_type + item_id)",
+      "may be referenced by ActivityLogEntry.decision_id"
+    ],
+    "ChatMessage": [
+      "optionally links to one queue item (MerchantApplication, ReconException or FlaggedTransaction) via linked_item_id, shown as 'Open in review card'",
+      "belongs to one agent's chat history; chat is read-only and never creates Decisions"
+    ],
+    "ActivityLogEntry": [
+      "references one queue item (MerchantApplication, ReconException or FlaggedTransaction) via target",
+      "human entries optionally reference the Decision that produced them via decision_id"
+    ]
+  },
+  "references": [
+    {
+      "from": "activitylogentry.decision_id",
+      "to": "decision.id"
+    }
+  ]
+}

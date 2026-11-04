@@ -1,0 +1,86 @@
+{
+  "name": "MerchantApplication",
+  "table": "merchantapplication",
+  "primaryKey": "id",
+  "fields": [
+    {
+      "name": "merchant_name",
+      "column": "merchant_name",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "business_type",
+      "column": "business_type",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "country",
+      "column": "country",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "monthly_volume_estimate",
+      "column": "monthly_volume_estimate",
+      "type": "number",
+      "sqlite": "REAL"
+    },
+    {
+      "name": "documents_complete",
+      "column": "documents_complete",
+      "type": "boolean",
+      "sqlite": "INTEGER"
+    },
+    {
+      "name": "kyc_result",
+      "column": "kyc_result",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "aml_result",
+      "column": "aml_result",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "credit_result",
+      "column": "credit_result",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "risk_tier",
+      "column": "risk_tier",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "reasoning",
+      "column": "reasoning",
+      "type": "text",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "recommendation",
+      "column": "recommendation",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "status",
+      "column": "status",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "received_at",
+      "column": "received_at",
+      "type": "date",
+      "sqlite": "TEXT"
+    }
+  ],
+  "seedRows": 6
+}

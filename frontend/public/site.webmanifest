@@ -1,0 +1,16 @@
+{
+  "name": "PayOps Console",
+  "short_name": "PayOps Cons\u2026",
+  "description": "Supervise onboarding, reconciliation and fraud AI agents. Review recommendations, approve decisions and audit every action in one console.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ]
+}

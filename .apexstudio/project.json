@@ -1,0 +1,116 @@
+{
+  "appName": "PayOps Console",
+  "slug": "payops-console",
+  "summary": "Supervise onboarding, reconciliation and fraud AI agents. Review recommendations, approve decisions and audit every action in one console.",
+  "site": {
+    "title": "PayOps Console | AI Agents for Payments Operations",
+    "description": "Supervise onboarding, reconciliation and fraud AI agents. Review recommendations, approve decisions and audit every action in one console.",
+    "keywords": [
+      "payops",
+      "fintech",
+      "merchant onboarding",
+      "payment reconciliation",
+      "fraud detection",
+      "AI agents",
+      "human in the loop"
+    ],
+    "theme_color": "#4f46e5",
+    "category": "",
+    "name": "PayOps Console",
+    "slug": "payops-console"
+  },
+  "entities": [
+    {
+      "name": "MerchantApplication",
+      "table": "merchantapplication",
+      "fields": [
+        "merchant_name",
+        "business_type",
+        "country",
+        "monthly_volume_estimate",
+        "documents_complete",
+        "kyc_result",
+        "aml_result",
+        "credit_result",
+        "risk_tier",
+        "reasoning",
+        "recommendation",
+        "status",
+        "received_at"
+      ]
+    },
+    {
+      "name": "ReconException",
+      "table": "reconexception",
+      "fields": [
+        "transaction_id",
+        "amount",
+        "variance_amount",
+        "currency",
+        "source",
+        "reason_code",
+        "processor_record",
+        "bank_record",
+        "ledger_record",
+        "explanation",
+        "proposed_fix",
+        "status",
+        "opened_at"
+      ]
+    },
+    {
+      "name": "FlaggedTransaction",
+      "table": "flaggedtransaction",
+      "fields": [
+        "transaction_id",
+        "merchant_name",
+        "amount",
+        "currency",
+        "risk_score",
+        "signals",
+        "customer_history",
+        "verdict",
+        "confidence",
+        "status",
+        "flagged_at"
+      ]
+    },
+    {
+      "name": "Decision",
+      "table": "decision",
+      "fields": [
+        "agent",
+        "item_type",
+        "item_id",
+        "action",
+        "reason",
+        "decided_by",
+        "decided_at"
+      ]
+    },
+    {
+      "name": "ChatMessage",
+      "table": "chatmessage",
+      "fields": [
+        "agent",
+        "role",
+        "content",
+        "linked_item_id"
+      ]
+    },
+    {
+      "name": "ActivityLogEntry",
+      "table": "activitylogentry",
+      "fields": [
+        "agent",
+        "timestamp",
+        "actor",
+        "actor_type",
+        "action",
+        "target",
+        "decision_id"
+      ]
+    }
+  ],
+  "connectors": []
+}

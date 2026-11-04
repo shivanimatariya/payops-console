@@ -1,0 +1,878 @@
+"openapi": "3.0.3"
+"info":
+  "title": "PayOps Console API"
+  "version": "0.1.0"
+"servers":
+  -
+    "url": "http://localhost:8000"
+"paths":
+  "/health":
+    "get":
+      "summary": "Health check"
+      "tags":
+        - "system"
+      "responses":
+        "200":
+          "description": "OK"
+  "/api/auth/register":
+    "post":
+      "summary": "Register"
+      "tags":
+        - "auth"
+      "responses":
+        "200":
+          "description": "OK"
+  "/api/auth/login":
+    "post":
+      "summary": "Login"
+      "tags":
+        - "auth"
+      "responses":
+        "200":
+          "description": "OK"
+  "/api/auth/me":
+    "get":
+      "summary": "Current user"
+      "tags":
+        - "auth"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+  "/api/files":
+    "post":
+      "summary": "Upload a file"
+      "tags":
+        - "files"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+  "/api/files/{id}":
+    "get":
+      "summary": "Download a file"
+      "tags":
+        - "files"
+      "responses":
+        "200":
+          "description": "OK"
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+  "/api/events":
+    "get":
+      "summary": "Server-sent events"
+      "tags":
+        - "realtime"
+      "responses":
+        "200":
+          "description": "OK"
+  "/api/ai/chat":
+    "post":
+      "summary": "AI chat"
+      "tags":
+        - "ai"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+  "/api/ai/summarize":
+    "post":
+      "summary": "Summarize text"
+      "tags":
+        - "ai"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+  "/api/ai/translate":
+    "post":
+      "summary": "Translate text"
+      "tags":
+        - "ai"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+  "/api/ai/extract":
+    "post":
+      "summary": "Extract fields from text"
+      "tags":
+        - "ai"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+  "/api/ai/rag/store":
+    "post":
+      "summary": "Store a document for retrieval"
+      "tags":
+        - "ai"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+  "/api/ai/rag/query":
+    "post":
+      "summary": "Query stored documents"
+      "tags":
+        - "ai"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+  "/api/integrations":
+    "get":
+      "summary": "List integrations"
+      "tags":
+        - "integrations"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+  "/api/integrations/public/maps-key":
+    "get":
+      "summary": "Google Maps browser key"
+      "tags":
+        - "integrations"
+      "responses":
+        "200":
+          "description": "OK"
+  "/api/integrations/{name}":
+    "post":
+      "summary": "Call an integration"
+      "tags":
+        - "integrations"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "name"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+  "/api/payments/checkout":
+    "post":
+      "summary": "Start a checkout"
+      "tags":
+        - "payments"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+  "/api/payments/subscriptions":
+    "get":
+      "summary": "Current user's subscriptions"
+      "tags":
+        - "payments"
+      "responses":
+        "200":
+          "description": "OK"
+      "security":
+        -
+          "bearerAuth": []
+  "/api/payments/webhook":
+    "post":
+      "summary": "Payment provider webhook"
+      "tags":
+        - "payments"
+      "responses":
+        "200":
+          "description": "OK"
+  "/api/entities/merchantapplication":
+    "get":
+      "summary": "List MerchantApplication"
+      "tags":
+        - "merchantapplication"
+      "security":
+        -
+          "bearerAuth": []
+      "responses":
+        "200":
+          "description": "OK"
+    "post":
+      "summary": "Create MerchantApplication"
+      "tags":
+        - "merchantapplication"
+      "security":
+        -
+          "bearerAuth": []
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/merchantapplication"
+      "responses":
+        "201":
+          "description": "Created"
+  "/api/entities/merchantapplication/{id}":
+    "get":
+      "summary": "Get MerchantApplication"
+      "tags":
+        - "merchantapplication"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+    "patch":
+      "summary": "Update MerchantApplication"
+      "tags":
+        - "merchantapplication"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/merchantapplication"
+      "responses":
+        "200":
+          "description": "OK"
+    "delete":
+      "summary": "Delete MerchantApplication"
+      "tags":
+        - "merchantapplication"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+  "/api/entities/reconexception":
+    "get":
+      "summary": "List ReconException"
+      "tags":
+        - "reconexception"
+      "security":
+        -
+          "bearerAuth": []
+      "responses":
+        "200":
+          "description": "OK"
+    "post":
+      "summary": "Create ReconException"
+      "tags":
+        - "reconexception"
+      "security":
+        -
+          "bearerAuth": []
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/reconexception"
+      "responses":
+        "201":
+          "description": "Created"
+  "/api/entities/reconexception/{id}":
+    "get":
+      "summary": "Get ReconException"
+      "tags":
+        - "reconexception"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+    "patch":
+      "summary": "Update ReconException"
+      "tags":
+        - "reconexception"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/reconexception"
+      "responses":
+        "200":
+          "description": "OK"
+    "delete":
+      "summary": "Delete ReconException"
+      "tags":
+        - "reconexception"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+  "/api/entities/flaggedtransaction":
+    "get":
+      "summary": "List FlaggedTransaction"
+      "tags":
+        - "flaggedtransaction"
+      "security":
+        -
+          "bearerAuth": []
+      "responses":
+        "200":
+          "description": "OK"
+    "post":
+      "summary": "Create FlaggedTransaction"
+      "tags":
+        - "flaggedtransaction"
+      "security":
+        -
+          "bearerAuth": []
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/flaggedtransaction"
+      "responses":
+        "201":
+          "description": "Created"
+  "/api/entities/flaggedtransaction/{id}":
+    "get":
+      "summary": "Get FlaggedTransaction"
+      "tags":
+        - "flaggedtransaction"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+    "patch":
+      "summary": "Update FlaggedTransaction"
+      "tags":
+        - "flaggedtransaction"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/flaggedtransaction"
+      "responses":
+        "200":
+          "description": "OK"
+    "delete":
+      "summary": "Delete FlaggedTransaction"
+      "tags":
+        - "flaggedtransaction"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+  "/api/entities/decision":
+    "get":
+      "summary": "List Decision"
+      "tags":
+        - "decision"
+      "security":
+        -
+          "bearerAuth": []
+      "responses":
+        "200":
+          "description": "OK"
+    "post":
+      "summary": "Create Decision"
+      "tags":
+        - "decision"
+      "security":
+        -
+          "bearerAuth": []
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/decision"
+      "responses":
+        "201":
+          "description": "Created"
+  "/api/entities/decision/{id}":
+    "get":
+      "summary": "Get Decision"
+      "tags":
+        - "decision"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+    "patch":
+      "summary": "Update Decision"
+      "tags":
+        - "decision"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/decision"
+      "responses":
+        "200":
+          "description": "OK"
+    "delete":
+      "summary": "Delete Decision"
+      "tags":
+        - "decision"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+  "/api/entities/chatmessage":
+    "get":
+      "summary": "List ChatMessage"
+      "tags":
+        - "chatmessage"
+      "security":
+        -
+          "bearerAuth": []
+      "responses":
+        "200":
+          "description": "OK"
+    "post":
+      "summary": "Create ChatMessage"
+      "tags":
+        - "chatmessage"
+      "security":
+        -
+          "bearerAuth": []
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/chatmessage"
+      "responses":
+        "201":
+          "description": "Created"
+  "/api/entities/chatmessage/{id}":
+    "get":
+      "summary": "Get ChatMessage"
+      "tags":
+        - "chatmessage"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+    "patch":
+      "summary": "Update ChatMessage"
+      "tags":
+        - "chatmessage"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/chatmessage"
+      "responses":
+        "200":
+          "description": "OK"
+    "delete":
+      "summary": "Delete ChatMessage"
+      "tags":
+        - "chatmessage"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+  "/api/entities/activitylogentry":
+    "get":
+      "summary": "List ActivityLogEntry"
+      "tags":
+        - "activitylogentry"
+      "security":
+        -
+          "bearerAuth": []
+      "responses":
+        "200":
+          "description": "OK"
+    "post":
+      "summary": "Create ActivityLogEntry"
+      "tags":
+        - "activitylogentry"
+      "security":
+        -
+          "bearerAuth": []
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/activitylogentry"
+      "responses":
+        "201":
+          "description": "Created"
+  "/api/entities/activitylogentry/{id}":
+    "get":
+      "summary": "Get ActivityLogEntry"
+      "tags":
+        - "activitylogentry"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+    "patch":
+      "summary": "Update ActivityLogEntry"
+      "tags":
+        - "activitylogentry"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "requestBody":
+        "required": true
+        "content":
+          "application/json":
+            "schema":
+              "$ref": "#/components/schemas/activitylogentry"
+      "responses":
+        "200":
+          "description": "OK"
+    "delete":
+      "summary": "Delete ActivityLogEntry"
+      "tags":
+        - "activitylogentry"
+      "security":
+        -
+          "bearerAuth": []
+      "parameters":
+        -
+          "name": "id"
+          "in": "path"
+          "required": true
+          "schema":
+            "type": "string"
+      "responses":
+        "200":
+          "description": "OK"
+"components":
+  "securitySchemes":
+    "bearerAuth":
+      "type": "http"
+      "scheme": "bearer"
+  "schemas":
+    "merchantapplication":
+      "type": "object"
+      "properties":
+        "id":
+          "type": "string"
+        "created_at":
+          "type": "string"
+        "merchant_name":
+          "type": "string"
+        "business_type":
+          "type": "string"
+        "country":
+          "type": "string"
+        "monthly_volume_estimate":
+          "type": "number"
+        "documents_complete":
+          "type": "boolean"
+        "kyc_result":
+          "type": "string"
+        "aml_result":
+          "type": "string"
+        "credit_result":
+          "type": "string"
+        "risk_tier":
+          "type": "string"
+        "reasoning":
+          "type": "string"
+        "recommendation":
+          "type": "string"
+        "status":
+          "type": "string"
+        "received_at":
+          "type": "string"
+    "reconexception":
+      "type": "object"
+      "properties":
+        "id":
+          "type": "string"
+        "created_at":
+          "type": "string"
+        "transaction_id":
+          "type": "string"
+        "amount":
+          "type": "number"
+        "variance_amount":
+          "type": "number"
+        "currency":
+          "type": "string"
+        "source":
+          "type": "string"
+        "reason_code":
+          "type": "string"
+        "processor_record":
+          "type": "string"
+        "bank_record":
+          "type": "string"
+        "ledger_record":
+          "type": "string"
+        "explanation":
+          "type": "string"
+        "proposed_fix":
+          "type": "string"
+        "status":
+          "type": "string"
+        "opened_at":
+          "type": "string"
+    "flaggedtransaction":
+      "type": "object"
+      "properties":
+        "id":
+          "type": "string"
+        "created_at":
+          "type": "string"
+        "transaction_id":
+          "type": "string"
+        "merchant_name":
+          "type": "string"
+        "amount":
+          "type": "number"
+        "currency":
+          "type": "string"
+        "risk_score":
+          "type": "number"
+        "signals":
+          "type": "string"
+        "customer_history":
+          "type": "string"
+        "verdict":
+          "type": "string"
+        "confidence":
+          "type": "number"
+        "status":
+          "type": "string"
+        "flagged_at":
+          "type": "string"
+    "decision":
+      "type": "object"
+      "properties":
+        "id":
+          "type": "string"
+        "created_at":
+          "type": "string"
+        "agent":
+          "type": "string"
+        "item_type":
+          "type": "string"
+        "item_id":
+          "type": "string"
+        "action":
+          "type": "string"
+        "reason":
+          "type": "string"
+        "decided_by":
+          "type": "string"
+        "decided_at":
+          "type": "string"
+    "chatmessage":
+      "type": "object"
+      "properties":
+        "id":
+          "type": "string"
+        "created_at":
+          "type": "string"
+        "agent":
+          "type": "string"
+        "role":
+          "type": "string"
+        "content":
+          "type": "string"
+        "linked_item_id":
+          "type": "string"
+    "activitylogentry":
+      "type": "object"
+      "properties":
+        "id":
+          "type": "string"
+        "created_at":
+          "type": "string"
+        "agent":
+          "type": "string"
+        "timestamp":
+          "type": "string"
+        "actor":
+          "type": "string"
+        "actor_type":
+          "type": "string"
+        "action":
+          "type": "string"
+        "target":
+          "type": "string"
+        "decision_id":
+          "type": "string"

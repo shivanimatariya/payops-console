@@ -1,0 +1,32 @@
+{
+  "name": "ChatMessage",
+  "table": "chatmessage",
+  "primaryKey": "id",
+  "fields": [
+    {
+      "name": "agent",
+      "column": "agent",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "role",
+      "column": "role",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "content",
+      "column": "content",
+      "type": "text",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "linked_item_id",
+      "column": "linked_item_id",
+      "type": "id",
+      "sqlite": "TEXT"
+    }
+  ],
+  "seedRows": 6
+}

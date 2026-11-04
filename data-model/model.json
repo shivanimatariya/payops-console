@@ -1,0 +1,17 @@
+{
+  "app": "PayOps Console",
+  "entities": [
+    "merchantapplication",
+    "reconexception",
+    "flaggedtransaction",
+    "decision",
+    "chatmessage",
+    "activitylogentry"
+  ],
+  "roles": [
+    "admin",
+    "manager",
+    "employee",
+    "viewer"
+  ]
+}

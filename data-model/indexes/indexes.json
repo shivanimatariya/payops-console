@@ -1,0 +1,11 @@
+{
+  "indexes": [
+    {
+      "name": "idx_collection",
+      "table": "rag_embeddings",
+      "columns": [
+        "collection"
+      ]
+    }
+  ]
+}

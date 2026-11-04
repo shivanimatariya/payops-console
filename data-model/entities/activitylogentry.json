@@ -1,0 +1,50 @@
+{
+  "name": "ActivityLogEntry",
+  "table": "activitylogentry",
+  "primaryKey": "id",
+  "fields": [
+    {
+      "name": "agent",
+      "column": "agent",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "timestamp",
+      "column": "timestamp",
+      "type": "date",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "actor",
+      "column": "actor",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "actor_type",
+      "column": "actor_type",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "action",
+      "column": "action",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "target",
+      "column": "target",
+      "type": "id",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "decision_id",
+      "column": "decision_id",
+      "type": "id",
+      "sqlite": "TEXT"
+    }
+  ],
+  "seedRows": 6
+}

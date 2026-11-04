@@ -1,0 +1,74 @@
+{
+  "name": "FlaggedTransaction",
+  "table": "flaggedtransaction",
+  "primaryKey": "id",
+  "fields": [
+    {
+      "name": "transaction_id",
+      "column": "transaction_id",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "merchant_name",
+      "column": "merchant_name",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "amount",
+      "column": "amount",
+      "type": "number",
+      "sqlite": "REAL"
+    },
+    {
+      "name": "currency",
+      "column": "currency",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "risk_score",
+      "column": "risk_score",
+      "type": "number",
+      "sqlite": "REAL"
+    },
+    {
+      "name": "signals",
+      "column": "signals",
+      "type": "text",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "customer_history",
+      "column": "customer_history",
+      "type": "text",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "verdict",
+      "column": "verdict",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "confidence",
+      "column": "confidence",
+      "type": "number",
+      "sqlite": "REAL"
+    },
+    {
+      "name": "status",
+      "column": "status",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "flagged_at",
+      "column": "flagged_at",
+      "type": "date",
+      "sqlite": "TEXT"
+    }
+  ],
+  "seedRows": 6
+}

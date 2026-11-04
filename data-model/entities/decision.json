@@ -1,0 +1,50 @@
+{
+  "name": "Decision",
+  "table": "decision",
+  "primaryKey": "id",
+  "fields": [
+    {
+      "name": "agent",
+      "column": "agent",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "item_type",
+      "column": "item_type",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "item_id",
+      "column": "item_id",
+      "type": "id",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "action",
+      "column": "action",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "reason",
+      "column": "reason",
+      "type": "text",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "decided_by",
+      "column": "decided_by",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "decided_at",
+      "column": "decided_at",
+      "type": "date",
+      "sqlite": "TEXT"
+    }
+  ],
+  "seedRows": 6
+}

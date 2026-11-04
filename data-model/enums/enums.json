@@ -1,0 +1,88 @@
+{
+  "roles": {
+    "values": [
+      "admin",
+      "manager",
+      "employee",
+      "viewer"
+    ],
+    "write": [
+      "admin",
+      "manager",
+      "employee"
+    ],
+    "delete": [
+      "admin"
+    ]
+  },
+  "fields": [
+    {
+      "table": "merchantapplication",
+      "column": "kyc_result"
+    },
+    {
+      "table": "merchantapplication",
+      "column": "aml_result"
+    },
+    {
+      "table": "merchantapplication",
+      "column": "credit_result"
+    },
+    {
+      "table": "merchantapplication",
+      "column": "risk_tier"
+    },
+    {
+      "table": "merchantapplication",
+      "column": "status"
+    },
+    {
+      "table": "reconexception",
+      "column": "source"
+    },
+    {
+      "table": "reconexception",
+      "column": "reason_code"
+    },
+    {
+      "table": "reconexception",
+      "column": "status"
+    },
+    {
+      "table": "flaggedtransaction",
+      "column": "verdict"
+    },
+    {
+      "table": "flaggedtransaction",
+      "column": "status"
+    },
+    {
+      "table": "decision",
+      "column": "agent"
+    },
+    {
+      "table": "decision",
+      "column": "item_type"
+    },
+    {
+      "table": "decision",
+      "column": "action"
+    },
+    {
+      "table": "chatmessage",
+      "column": "agent"
+    },
+    {
+      "table": "chatmessage",
+      "column": "role"
+    },
+    {
+      "table": "activitylogentry",
+      "column": "agent"
+    },
+    {
+      "table": "activitylogentry",
+      "column": "actor_type"
+    }
+  ]
+}

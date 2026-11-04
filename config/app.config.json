@@ -1,0 +1,7 @@
+{
+  "name": "PayOps Console",
+  "slug": "payops-console",
+  "description": "Supervise onboarding, reconciliation and fraud AI agents. Review recommendations, approve decisions and audit every action in one console.",
+  "frontendPort": 5174,
+  "backendPort": 8000
+}

@@ -1,0 +1,29 @@
+{
+  "primaryKeys": {
+    "merchantapplication": [
+      "id"
+    ],
+    "reconexception": [
+      "id"
+    ],
+    "flaggedtransaction": [
+      "id"
+    ],
+    "decision": [
+      "id"
+    ],
+    "chatmessage": [
+      "id"
+    ],
+    "activitylogentry": [
+      "id"
+    ]
+  },
+  "unique": {
+    "users": [
+      [
+        "email"
+      ]
+    ]
+  }
+}

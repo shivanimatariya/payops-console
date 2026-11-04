@@ -1,0 +1,19 @@
+{
+  "auth": "bearer token (HMAC-signed)",
+  "secretEnv": "APEX_SECRET",
+  "corsEnv": "APEX_CORS",
+  "roles": [
+    "admin",
+    "manager",
+    "employee",
+    "viewer"
+  ],
+  "writeRoles": [
+    "admin",
+    "manager",
+    "employee"
+  ],
+  "deleteRoles": [
+    "admin"
+  ]
+}

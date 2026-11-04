@@ -1,0 +1,86 @@
+{
+  "name": "ReconException",
+  "table": "reconexception",
+  "primaryKey": "id",
+  "fields": [
+    {
+      "name": "transaction_id",
+      "column": "transaction_id",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "amount",
+      "column": "amount",
+      "type": "number",
+      "sqlite": "REAL"
+    },
+    {
+      "name": "variance_amount",
+      "column": "variance_amount",
+      "type": "number",
+      "sqlite": "REAL"
+    },
+    {
+      "name": "currency",
+      "column": "currency",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "source",
+      "column": "source",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "reason_code",
+      "column": "reason_code",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "processor_record",
+      "column": "processor_record",
+      "type": "text",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "bank_record",
+      "column": "bank_record",
+      "type": "text",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "ledger_record",
+      "column": "ledger_record",
+      "type": "text",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "explanation",
+      "column": "explanation",
+      "type": "text",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "proposed_fix",
+      "column": "proposed_fix",
+      "type": "string",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "status",
+      "column": "status",
+      "type": "enum",
+      "sqlite": "TEXT"
+    },
+    {
+      "name": "opened_at",
+      "column": "opened_at",
+      "type": "date",
+      "sqlite": "TEXT"
+    }
+  ],
+  "seedRows": 6
+}

@@ -1,0 +1,18 @@
+{
+  "title": "PayOps Console | AI Agents for Payments Operations",
+  "description": "Supervise onboarding, reconciliation and fraud AI agents. Review recommendations, approve decisions and audit every action in one console.",
+  "keywords": [
+    "payops",
+    "fintech",
+    "merchant onboarding",
+    "payment reconciliation",
+    "fraud detection",
+    "AI agents",
+    "human in the loop"
+  ],
+  "themeColor": "#4f46e5",
+  "colors": {
+    "primary": "#4f46e5",
+    "secondary": "#0f766e"
+  }
+}

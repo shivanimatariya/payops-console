@@ -1,0 +1,19 @@
+{
+  "formatVersion": 1,
+  "root": "payops-console",
+  "topLevel": [
+    ".env.example",
+    ".gitignore",
+    "README.md",
+    "VERSION",
+    "api",
+    "backend",
+    "config",
+    "data-model",
+    "database",
+    "docker-compose.yml",
+    "frontend",
+    "manifest.json"
+  ],
+  "fileCount": 90
+}
