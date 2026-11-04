@@ -138,7 +138,7 @@ function StatusPill({ status }) {
 
 function Tile({ label, value, note }) {
   return (
-    <div className='bg-card border border-card-border rounded-xl p-4 shadow-sm'>
+    <div className='!bg-blue-100 !border-blue-200 border rounded-xl p-4 shadow-sm'>
       <div className='text-xs font-bold uppercase tracking-wider text-slate-600'>{label}</div>
       <div className='mt-1 text-2xl font-bold text-slate-900'>{value}</div>
       {note && <div className='text-xs font-semibold text-slate-600 mt-0.5'>{note}</div>}
